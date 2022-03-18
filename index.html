@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>New world crafting</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center mt-4">
+                <select id="option">
+        <option value="asmodeum">Asmodeum</option>
+        <option value="orichalcum_ingot">Lingote de oricalco</option>
+        <option value="starmetal_ingot">Lingote de metal estelar</option>
+        <option value="steel_ingot">Lingote de acero</option>
+        <option value="iron_ingot">Lingote de hierro</option>
+    </select>
+                <input type="number" id="cantidad" value="1" min="1">
+                <select id="idioma">
+        <option value="eng">Ingles</option>
+        <option value="spa">Español</option>
+    </select>
+                <button id="calcular">Calcular</button>
+            </div>
+        </div>
+        <div class="row m-3">
+            <h3 id="crafteando"></h3>
+            <div class="col-md-6">
+                <h3>Detalle</h3>
+                <div class="p-2" id="lista">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Materiales basicos</h3>
+                <div id="listaResumen">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

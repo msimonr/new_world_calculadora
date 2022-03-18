@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(233, 233, 233);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.subReceta {
+    border: 1px rgb(192, 192, 192) solid;
+    box-shadow: 0.5px 0.5px 0.5px rgb(161, 161, 161);
+    margin: 5px;
+}
