@@ -28,6 +28,29 @@ let recetas = {
         { mat: "cinnabar", cant: 1 },
         { mat: "obsidian_flux", cant: 1 },
         { mat: "charcoal", cant: 2 }
+    ],
+    linen: [
+        { mat: "fibers", cant: 4 }
+    ],
+    sateen: [
+        { mat: "linen", cant: 4 },
+        { mat: "wireweave", cant: 1 }
+    ],
+    silk: [
+        { mat: "silk_threads", cant: 6 },
+        { mat: "sateen", cant: 2 },
+        { mat: "wireweave", cant: 1 }
+    ],
+    infused_silk: [
+        { mat: "wirefiber", cant: 8 },
+        { mat: "silk", cant: 2 },
+        { mat: "wireweave", cant: 1 }
+    ],
+    phoenixweave: [
+        { mat: "infused_silk", cant: 5 },
+        { mat: "scalecloth", cant: 1 },
+        { mat: "blisterweave", cant: 1 },
+        { mat: "wireweave", cant: 1 }
     ]
 }
 
@@ -45,6 +68,17 @@ let lenguaje = {
     cinnabar: { eng: 'cinnabar', spa: 'cinabarita' },
     asmodeum: { eng: 'asmodeum ingot', spa: 'lingote de asmodeum' },
     obsidian_flux: { eng: 'obsidian flux', spa: 'flujo de obsidiana' },
+    fibers: { eng: 'fibers', spa: 'fibras' },
+    linen: { eng: 'linen', spa: 'lino' },
+    sateen: { eng: 'sateen', spa: 'saten' },
+    silk_threads: { eng: 'silk threads', spa: 'hilos de seda' },
+    silk: { eng: 'silk', spa: 'seda' },
+    wirefiber: { eng: 'wirefiber', spa: 'fibra tensil' },
+    infused_silk: { eng: 'infused silk', spa: 'seda imbuida' },
+    scalecloth: { eng: 'scalecloth', spa: 'escalienzo' },
+    blisterweave: { eng: 'blisterweave', spa: 'abrasaten' },
+    phoenixweave: { eng: 'phoenixweave', spa: 'tejido fenix' },
+    wireweave: { eng: 'wireweave', spa: 'tejido de alambre' }
 }
 
 var materiales_base = {};
@@ -96,6 +130,7 @@ function armarLista(receta) {
         if (elem.recetaPrevia !== undefined) {
             lista += `<li>${lenguaje[elem.mat][leng]} x ${elem.cant}${armarLista(elem.recetaPrevia)}</li>`;
         } else {
+            console.log(elem.mat);
             lista += `<li>${lenguaje[elem.mat][leng]} x ${elem.cant}</li>`;
         }
     }
